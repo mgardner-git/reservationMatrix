@@ -1,0 +1,27 @@
+<div>
+	<p>
+	<label>Begin Date:</label>
+	<date-directive model="beginDate"></date-directive>
+	</p>
+	<label>End Date:</label>
+	<date-directive model="endDate"></date-directive>
+	<div id="wrapper">
+		<div id="inner">
+			<table border = "1" id="matrix">
+				<tr class="reservable" ng-repeat="reservable in reservables">
+					<td>{{reservable.name}}</td>
+					<td class="spot" ng-repeat = "date in dateRange" ng-class="{reserved:isReserved(date,reservable)}">&nbsp;</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td ng-repeat = "date in dateRange">
+						{{format(date)}}
+					</td>
+				</tr>
+			</table>			
+		</div>
+	</div>
+	<button value="<<" ng-click="left()">&lt;&lt;</button>
+	<button value=">>" ng-click="right()">&gt;&gt;</button>
+	{{dateRange.length}} days
+</div>

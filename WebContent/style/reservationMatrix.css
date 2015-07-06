@@ -1,0 +1,23 @@
+#matrix td.ui-selected
+{
+	background-color: brown;	
+}
+
+#matrix td.reserved{
+	background-color: black;
+}
+
+#matrix{
+	background-color: white;
+	cursor: pointer;
+}
+#wrapper{
+	overflow: hidden;
+	width: 1500px;
+}
+#inner{
+	padding: 75px;
+	
+	background-color: blue;
+	width: 5000px;
+}
